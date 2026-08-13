@@ -1,0 +1,14 @@
+{
+  "name": "meron-healing-space",
+  "version": "1.0.0",
+  "description": "ETM Meron Healing Space website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

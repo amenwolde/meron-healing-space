@@ -1,0 +1,56 @@
+---
+title: ETM Facial Reset
+order: 3
+eyebrow: Holistic Facial Treatment
+summary: A holistic facial treatment that combines facial massage, gentle muscle release, and relaxation techniques to reduce tension and refresh both the face and mind.
+price: Pricing on enquiry
+bestFor: Facial, jaw and scalp tension
+format: In person
+image: ""
+compareBestFor: Facial, jaw and scalp tension, wanting a refresh
+compareIncludes: Facial massage, muscle release, relaxation
+metaDescription: ETM Facial Reset at Meron Healing Space - holistic facial massage and gentle muscle release for jaw, scalp and neck tension, refreshing both face and mind.
+body: |
+  Stress is often held in the face, jaw, scalp, and neck — and it is one of the last places most people think to look. Clenching through a difficult day, frowning at a screen, holding the jaw tight through the night: all of it accumulates.
+
+  The Facial Reset addresses that directly. Gentle facial massage and muscle release work through the jaw, temples, scalp, brow, and neck, softening tightness that has often been held for a very long time.
+
+  Alongside the physical release, the treatment encourages relaxation and healthy circulation, which is why people so often describe their skin looking refreshed afterwards as well as feeling looser.
+
+  What surprises most clients is how far the effect travels. Releasing the face and jaw tends to settle the whole body, and many people find this one of the most deeply calming treatments we offer.
+highlights:
+  - Facial massage
+  - Jaw, scalp and neck release
+  - Circulation and skin refresh
+  - Whole-body calm
+suitableFor:
+  - Jaw clenching
+  - Teeth grinding
+  - Tension headaches
+  - Frown and brow tightness
+  - Screen fatigue
+  - Scalp tightness
+  - Wanting a refresh
+  - Feeling wired
+includes:
+  - A short consultation about where you hold facial tension
+  - Holistic facial massage
+  - Gentle jaw, temple and brow muscle release
+  - Scalp and neck release work
+  - Relaxation and breath guidance
+  - Circulation support for a refreshed appearance
+  - Simple self-release techniques to use at home
+glance:
+  - key: Best for
+    value: Facial, jaw and scalp tension
+  - key: Format
+    value: In person
+  - key: Focus
+    value: Face, jaw, scalp, neck
+  - key: Also helps
+    value: Whole-body calm
+  - key: Pricing
+    value: On enquiry
+noteTitle: Often overlooked
+noteText: If you clench your jaw, grind your teeth, or get tension headaches, this is likely the treatment that will surprise you most.
+---

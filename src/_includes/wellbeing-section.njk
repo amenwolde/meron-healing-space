@@ -1,0 +1,16 @@
+<section class="bg-bark" id="wellbeing">
+  <div class="container">
+    <p class="eyebrow">{{ p.supportEyebrow }}</p>
+    <h2>{{ p.supportHeadingA }}<br /><em>{{ p.supportHeadingB }}</em></h2>
+    <p class="lead">{{ p.supportIntro }}</p>
+    <div class="wb-grid mt-3">
+      {% for item in p.items %}
+      <div class="wb-line">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% if p.note %}<p class="lead" style="margin-top:2.5rem; font-size:0.95rem;">{{ p.note }}</p>{% endif %}
+  </div>
+</section>

@@ -1,0 +1,56 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Retired pages from earlier versions of the site
+[[redirects]]
+  from = "/experience/*"
+  to = "/about/"
+  status = 301
+[[redirects]]
+  from = "/wellbeing/*"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/faq/*"
+  to = "/book/"
+  status = 301
+[[redirects]]
+  from = "/contact/*"
+  to = "/book/"
+  status = 301
+[[redirects]]
+  from = "/programs.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/exercises.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-sleep.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-hormones.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-menopause.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-weight.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-detox.html"
+  to = "/treatments/"
+  status = 301
+[[redirects]]
+  from = "/treatment-immune.html"
+  to = "/treatments/"
+  status = 301

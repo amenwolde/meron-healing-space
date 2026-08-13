@@ -1,0 +1,31 @@
+---
+layout: base.njk
+nav: news
+permalink: /news/
+eleventyComputed:
+  metaTitle: "{{ pages.news.metaTitle }}"
+  metaDescription: "{{ pages.news.metaDescription }}"
+---
+{% set p = pages.news %}
+{% set crumb = "News" %}
+{% include "pagehero.njk" %}
+
+<section class="bg-white">
+  <div class="container">
+    {% if collections.news.length %}
+    <div class="grid-3">
+      {% for post in collections.news %}
+      <a href="{{ post.url }}" class="card card-link">
+        {% if post.data.image %}<div class="card-img" style="background-image:url('{{ post.data.image }}');"></div>{% endif %}
+        <p class="post-date">{{ post.data.date | niceDate }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.summary }}</p>
+        <span class="card-arrow">Read more &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="lead">{{ p.emptyMessage }}</p>
+    {% endif %}
+  </div>
+</section>

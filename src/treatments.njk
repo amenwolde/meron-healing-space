@@ -1,0 +1,64 @@
+---
+layout: base.njk
+nav: treatments
+permalink: /treatments/
+eleventyComputed:
+  metaTitle: "{{ pages.treatments.metaTitle }}"
+  metaDescription: "{{ pages.treatments.metaDescription }}"
+---
+{% set p = pages.treatments %}
+{% set crumb = "Treatments" %}
+{% include "pagehero.njk" %}
+
+<section class="bg-white">
+  <div class="container">
+    <div class="grid-3">
+      {% for t in collections.treatments %}
+      <a href="{{ t.url }}" class="card card-link">
+        {% if t.data.image %}<div class="card-img" style="background-image:url('{{ t.data.image }}');"></div>{% endif %}
+        <div class="accent"></div>
+        <h3>{{ t.data.title }}</h3>
+        <p>{{ t.data.summary }}</p>
+        {% if t.data.highlights %}
+        <ul class="tick-list">
+          {% for h in t.data.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <p class="card-meta">{{ t.data.price }}</p>
+        <span class="card-arrow">View treatment &rarr;</span>
+      </a>
+      {% endfor %}
+      <div class="card" style="background:var(--sand);">
+        <div class="accent"></div>
+        <h3>{{ p.helpTitle }}</h3>
+        <p>{{ p.helpText }}</p>
+        <a href="/book/" class="btn btn-primary" style="margin-top:1.4rem;">Ask Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream">
+  <div class="container">
+    <p class="eyebrow">{{ p.compareEyebrow }}</p>
+    <h2>{{ p.compareHeadingA }}<br /><em>{{ p.compareHeadingB }}</em></h2>
+    <div style="overflow-x:auto;">
+      <table class="tbl">
+        <thead><tr><th>Treatment</th><th>Best for</th><th>Includes</th><th>Format</th><th>Price</th></tr></thead>
+        <tbody>
+          {% for t in collections.treatments %}
+          <tr>
+            <td>{{ t.data.title }}</td>
+            <td>{{ t.data.compareBestFor }}</td>
+            <td>{{ t.data.compareIncludes }}</td>
+            <td>{{ t.data.format }}</td>
+            <td>{{ t.data.price }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{% include "wellbeing-section.njk" %}

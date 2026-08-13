@@ -1,0 +1,87 @@
+---
+layout: base.njk
+nav: about
+permalink: /about/
+eleventyComputed:
+  metaTitle: "{{ pages.about.metaTitle }}"
+  metaDescription: "{{ pages.about.metaDescription }}"
+---
+{% set p = pages.about %}
+{% set crumb = "About" %}
+{% include "pagehero.njk" %}
+
+<section class="bg-white" id="story">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow">{{ p.storyEyebrow }}</p>
+      <h2>{{ p.storyHeadingA }}<br /><em>{{ p.storyHeadingB }}</em></h2>
+      {% for para in p.storyBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+      <p class="pull">{{ p.storyPull }}</p>
+    </div>
+    <div class="visual-block">
+      {% if p.storyImage %}
+      <div class="visual-shape" style="background-image:url('{{ p.storyImage }}'); background-size:cover; background-position:center;"></div>
+      {% else %}
+      <div class="visual-shape"><span class="vs-text">{{ p.storyImageQuote }}</span></div>
+      {% endif %}
+      <div class="visual-badge">
+        <span class="vb-num">ETM</span>
+        <span class="vb-lbl">Ethiopian Traditional Method</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream" id="what">
+  <div class="container">
+    <p class="eyebrow">{{ p.whatEyebrow }}</p>
+    <h2>{{ p.whatHeadingA }}<br /><em>{{ p.whatHeadingB }}</em></h2>
+    {% for para in p.whatBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+    <p class="pull">{{ p.whatPull }}</p>
+    <div class="grid-3 mt-3">
+      {% for e in p.elements %}
+      <div class="card" style="background:var(--white);{% if loop.last %}background:var(--sand);{% endif %}">
+        <span class="accent-num">{{ e.label }}</span>
+        <h3>{{ e.title }}</h3>
+        <p>{{ e.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="experience">
+  <div class="container">
+    <p class="eyebrow">{{ p.expEyebrow }}</p>
+    <h2>{{ p.expHeadingA }}<br /><em>{{ p.expHeadingB }}</em></h2>
+    {% for para in p.expBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+    <div class="steps">
+      {% for s in p.steps %}
+      <div class="step"><span class="step-n">{{ s.num }}</span><h4>{{ s.title }}</h4><p>{{ s.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow">{{ p.practicalEyebrow }}</p>
+      <h2>{{ p.practicalHeadingA }}<br /><em>{{ p.practicalHeadingB }}</em></h2>
+      <ul class="incl-list mt-2">
+        {% for i in p.practicalItems %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+      <div class="btn-row">
+        <a href="/book/" class="btn btn-primary">Book a Treatment</a>
+        <a href="/treatments/" class="btn btn-outline">Our Treatments</a>
+      </div>
+    </div>
+    <div class="visual-block">
+      {% if p.practicalImage %}
+      <div class="visual-shape" style="border-radius:0 180px 180px 180px; background-image:url('{{ p.practicalImage }}'); background-size:cover; background-position:center;"></div>
+      {% else %}
+      <div class="visual-shape" style="border-radius:0 180px 180px 180px;"><span class="vs-text">{{ p.practicalImageQuote }}</span></div>
+      {% endif %}
+    </div>
+  </div>
+</section>

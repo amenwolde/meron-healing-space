@@ -5,9 +5,8 @@ nav: news
 <section class="page-hero">
   <div class="orb orb-a"></div><div class="orb orb-b"></div>
   <div class="container">
-    <p class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/news/">News</a></p>
     <p class="eyebrow">{{ date | niceDate }}</p>
-    <h1 style="color:#FDFAF6;">{{ title }}</h1>
+    <h1 style="color:var(--cream);">{{ title }}</h1>
     {% if summary %}<p>{{ summary }}</p>{% endif %}
   </div>
 </section>
@@ -19,8 +18,9 @@ nav: news
       {% for para in body | paragraphs %}<p class="lead lead-wide">{{ para }}</p>{% endfor %}
     </div>
     <div class="btn-row">
+      {% if videoUrl %}<a href="{{ videoUrl }}" class="btn btn-primary" target="_blank" rel="noopener">Watch on YouTube</a>{% endif %}
       <a href="/news/" class="btn btn-outline">All Updates</a>
-      <a href="/book/" class="btn btn-primary">Book a Treatment</a>
+      <a href="/book/" class="btn {% if videoUrl %}btn-outline{% else %}btn-primary{% endif %}">Book a Treatment</a>
     </div>
   </div>
 </section>

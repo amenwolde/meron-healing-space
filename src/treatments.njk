@@ -44,15 +44,16 @@ eleventyComputed:
     <h2>{{ p.compareHeadingA }}<br /><em>{{ p.compareHeadingB }}</em></h2>
     <div style="overflow-x:auto;">
       <table class="tbl">
-        <thead><tr><th>Treatment</th><th>Best for</th><th>Includes</th><th>Format</th><th>Price</th></tr></thead>
+        <thead><tr><th>Treatment</th><th>Best for</th><th>Includes</th><th>Format</th><th>Price</th><th></th></tr></thead>
         <tbody>
           {% for t in collections.treatments %}
           <tr>
-            <td>{{ t.data.title }}</td>
+            <td><a href="{{ t.url }}" class="tbl-link">{{ t.data.title }}</a></td>
             <td>{{ t.data.compareBestFor }}</td>
             <td>{{ t.data.compareIncludes }}</td>
             <td>{{ t.data.format }}</td>
             <td>{{ t.data.price }}</td>
+            <td><a href="{{ t.url }}" class="tbl-view">View &rarr;</a></td>
           </tr>
           {% endfor %}
         </tbody>

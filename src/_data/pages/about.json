@@ -8,9 +8,9 @@
   "storyEyebrow": "Our Story",
   "storyHeadingA": "The story",
   "storyHeadingB": "behind ETM",
-  "storyBody": "ETM (Ethiopian Traditional Method) was inspired by a childhood rooted in faith, nature, and simple daily living.\n\nGrowing up in Ethiopia, wellbeing was woven into everyday life. Time outdoors, natural foods, movement, prayer, community, and regular fasting were part of a lifestyle that nurtured both body and mind. These simple rhythms became the foundation of a lifelong passion for holistic wellbeing.\n\nAfter more than fifteen years of working in wellness and caring for people from many different backgrounds, I saw how modern life often leaves us disconnected from our bodies. Constant stress, busy schedules, poor sleep, and physical tension have become common experiences.\n\nThis inspired me to create ETM — a gentle approach that brings together timeless wisdom with modern understanding of the body. It encourages us to slow down, listen to our bodies, and build simple daily habits that support long-term wellbeing.",
-  "storyPull": "ETM is not about quick fixes or perfection. It is about returning to the simple rhythms that help us care for ourselves — one careful step at a time.",
-  "storyImage": "",
+  "storyBody": "ETM (Ethiopian Traditional Method) was inspired by a childhood rooted in faith, nature, and simple daily living.\n\nGrowing up in Ethiopia, wellbeing was woven into everyday life. Time outdoors, natural foods, movement, prayer, community, and regular fasting were part of a lifestyle that nurtured both body and mind. These simple rhythms became the foundation of a lifelong passion for holistic wellbeing.\n\nAfter more than fifteen years of working in wellness and caring for people from many different backgrounds, I saw how modern life often leaves us disconnected from our bodies. Constant stress, busy schedules, poor sleep, and physical tension have become common experiences.\n\nThis inspired me to create ETM \u2014 a gentle approach that brings together timeless wisdom with modern understanding of the body. It encourages us to slow down, listen to our bodies, and build simple daily habits that support long-term wellbeing.",
+  "storyPull": "ETM is not about quick fixes or perfection. It is about returning to the simple rhythms that help us care for ourselves \u2014 one careful step at a time.",
+  "storyImage": "/assets/uploads/meron-story.png",
   "storyImageQuote": "Faith, nature, and simple daily living",
   "whatEyebrow": "What is ETM?",
   "whatHeadingA": "A holistic approach to",
@@ -19,32 +19,32 @@
   "whatPull": "Every session is personalised because every person is unique.",
   "elements": [
     {
-      "label": "One",
+      "label": "01",
       "title": "Therapeutic Touch",
       "text": "Hands-on work grounded in years of practice. Unhurried, attentive, and always at a depth you are comfortable with."
     },
     {
-      "label": "Two",
+      "label": "02",
       "title": "Breath",
       "text": "Simple guided breathing to calm the nervous system, ease tension, and bring you back into the present moment."
     },
     {
-      "label": "Three",
+      "label": "03",
       "title": "Movement",
       "text": "Gentle, accessible movement to release stiffness, support mobility, and help you feel at home in your body again."
     },
     {
-      "label": "Four",
+      "label": "04",
       "title": "Rest",
       "text": "Real rest, treated as a practice rather than an afterthought. Learning how to let the body settle and restore."
     },
     {
-      "label": "Five",
+      "label": "05",
       "title": "Healthy Daily Habits",
       "text": "Small, sustainable rhythms around food, sleep, and routine that carry the work forward between sessions."
     },
     {
-      "label": "Together",
+      "label": "\u221e",
       "title": "Faith & Nature",
       "text": "The foundation beneath it all. ETM was shaped by faith, by the natural world, and by paying close attention to what the body already knows."
     }
@@ -52,7 +52,7 @@
   "expEyebrow": "The ETM Experience",
   "expHeadingA": "What a session",
   "expHeadingB": "feels like",
-  "expBody": "Every session begins by understanding you — your lifestyle, your goals, and how your body feels today.\n\nYour treatment is then carefully tailored to your individual needs using ETM principles. Throughout your session, you will be encouraged to slow down, breathe naturally, and allow your body to relax.\n\nThe experience does not end when you leave. You will receive simple, practical guidance to help you continue caring for your wellbeing in everyday life.",
+  "expBody": "Every session begins by understanding you \u2014 your lifestyle, your goals, and how your body feels today.\n\nYour treatment is then carefully tailored to your individual needs using ETM principles. Throughout your session, you will be encouraged to slow down, breathe naturally, and allow your body to relax.\n\nThe experience does not end when you leave. You will receive simple, practical guidance to help you continue caring for your wellbeing in everyday life.",
   "steps": [
     {
       "num": "01",
@@ -62,7 +62,7 @@
     {
       "num": "02",
       "title": "Tailored Treatment",
-      "text": "Your treatment is built from that conversation using ETM principles — therapeutic touch, breath, movement, and relaxation, weighted to what you need."
+      "text": "Your treatment is built from that conversation using ETM principles \u2014 therapeutic touch, breath, movement, and relaxation, weighted to what you need."
     },
     {
       "num": "03",
@@ -72,7 +72,7 @@
     {
       "num": "04",
       "title": "Beyond the Session",
-      "text": "You leave with simple, practical guidance — small habits and practices you can genuinely fit into everyday life."
+      "text": "You leave with simple, practical guidance \u2014 small habits and practices you can genuinely fit into everyday life."
     }
   ],
   "practicalEyebrow": "Before You Come",

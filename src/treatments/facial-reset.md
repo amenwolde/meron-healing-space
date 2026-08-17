@@ -2,6 +2,7 @@
 title: ETM Facial Reset
 order: 3
 eyebrow: Holistic Facial Treatment
+when: When tension builds in your jaw, scalp, and face
 summary: A holistic facial treatment that combines facial massage, gentle muscle release, and relaxation techniques to reduce tension and refresh both the face and mind.
 price: Pricing on enquiry
 bestFor: Facial, jaw and scalp tension

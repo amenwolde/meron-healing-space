@@ -10,6 +10,15 @@ eleventyComputed:
 {% set crumb = "Book" %}
 {% include "pagehero.njk" %}
 
+<div class="container">
+  <div class="quick-nav">
+    <a href="#appointment">Book a Treatment</a>
+    <a href="#how">How It Works</a>
+    <a href="#booking-form">Contact &amp; Enquiry Form</a>
+    <a href="#faq">FAQs</a>
+  </div>
+</div>
+
 <section class="bg-white">
   <div class="container">
     <div class="grid-4">
@@ -18,7 +27,7 @@ eleventyComputed:
         <div class="accent"></div>
         <h3>{{ o.title }}</h3>
         <p>{{ o.text }}</p>
-        <a href="#booking-form" class="btn book-btn">{{ o.label }}</a>
+        <a href="#booking-form" class="btn book-btn" data-booking-type="{{ o.bookingType }}" onclick="prefillBooking(this)">{{ o.label }}</a>
       </div>
       {% endfor %}
     </div>
@@ -63,7 +72,7 @@ eleventyComputed:
       <div class="f-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
       <div class="f-group"><label>Phone</label><input type="tel" name="phone" placeholder="Optional"></div>
       <div class="f-group"><label>What would you like to book?</label>
-        <select name="bookingType">
+        <select name="bookingType" id="bookingTypeSelect">
           <option value="">Select&hellip;</option>
           <option>A one-to-one appointment</option>
           <option>A group session</option>
@@ -105,3 +114,15 @@ eleventyComputed:
     </div>
   </div>
 </section>
+
+<script>
+function prefillBooking(el){
+  var sel = document.getElementById('bookingTypeSelect');
+  var val = el.getAttribute('data-booking-type');
+  if (sel && val) {
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text === val) { sel.selectedIndex = i; break; }
+    }
+  }
+}
+</script>

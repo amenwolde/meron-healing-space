@@ -2,6 +2,7 @@
 title: ETM Signature Massage
 order: 2
 eyebrow: Deeply Restorative Bodywork
+when: When tight muscles and stiffness need real attention
 summary: A deeply restorative massage designed to relax muscles, improve circulation, and support overall wellbeing.
 price: Pricing on enquiry
 bestFor: Muscle tension and stiffness

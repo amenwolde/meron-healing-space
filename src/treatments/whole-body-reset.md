@@ -2,6 +2,7 @@
 title: ETM Whole Body Reset
 order: 1
 eyebrow: Our Most Complete Treatment
+when: When you feel tense, wired, or disconnected from your body
 summary: A personalised treatment that combines therapeutic massage, breathwork, movement, and relaxation techniques to help release tension and restore balance.
 price: Pricing on enquiry
 bestFor: A complete reset

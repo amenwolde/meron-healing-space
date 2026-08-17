@@ -10,6 +10,15 @@ eleventyComputed:
 {% set crumb = "About" %}
 {% include "pagehero.njk" %}
 
+<div class="container">
+  <div class="quick-nav">
+    <a href="#story">Our Story</a>
+    <a href="#what">What is ETM?</a>
+    <a href="#experience">The Experience</a>
+    <a href="#before">Before You Come</a>
+  </div>
+</div>
+
 <section class="bg-white" id="story">
   <div class="container grid-2">
     <div>
@@ -20,11 +29,11 @@ eleventyComputed:
     </div>
     <div class="visual-block">
       {% if p.storyImage %}
-      <div class="visual-shape" style="background-image:url('{{ p.storyImage }}'); background-size:cover; background-position:center;"></div>
+      <div class="visual-shape visual-shape-framed" style="background-image:url('{{ p.storyImage }}'); background-size:cover; background-position:center;"></div>
       {% else %}
-      <div class="visual-shape"><span class="vs-text">{{ p.storyImageQuote }}</span></div>
+      <div class="photo-placeholder"><span class="photo-placeholder-text">Photo of Meron &mdash; coming soon</span></div>
       {% endif %}
-      <div class="visual-badge">
+      <div class="visual-badge visual-badge-cover">
         <span class="vb-num">ETM</span>
         <span class="vb-lbl">Ethiopian Traditional Method</span>
       </div>
@@ -63,7 +72,7 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="bg-cream">
+<section class="bg-cream" id="before">
   <div class="container grid-2">
     <div>
       <p class="eyebrow">{{ p.practicalEyebrow }}</p>
@@ -80,7 +89,7 @@ eleventyComputed:
       {% if p.practicalImage %}
       <div class="visual-shape" style="border-radius:0 180px 180px 180px; background-image:url('{{ p.practicalImage }}'); background-size:cover; background-position:center;"></div>
       {% else %}
-      <div class="visual-shape" style="border-radius:0 180px 180px 180px;"><span class="vs-text">{{ p.practicalImageQuote }}</span></div>
+      <div class="photo-placeholder" style="border-radius:0 180px 180px 180px;"><span class="photo-placeholder-text">Photo of the space &mdash; coming soon</span></div>
       {% endif %}
     </div>
   </div>

@@ -7,107 +7,71 @@ eleventyComputed:
 ---
 {% set p = pages.home %}
 
-<section class="home-hero" style="padding:0;">
-  <div class="hh-text">
-    <p class="eyebrow">{{ p.heroEyebrow }}</p>
-    <h1><em>{{ p.heroTitleA }}</em><br />{{ p.heroTitleB }}</h1>
-    <p class="lead">{{ p.heroText }}</p>
-    <div class="btn-row">
-      <a href="/book/" class="btn btn-primary">{{ p.heroPrimaryLabel }}</a>
-      <a href="/treatments/" class="btn btn-outline">{{ p.heroSecondaryLabel }}</a>
+<section class="bg-white">
+  <div class="container">
+    <div class="grid-2 home-photo-hero" style="align-items:center;">
+      <div class="visual-block" style="height:600px;">
+        <div class="visual-shape" style="background-image:url('{{ p.heroImage }}'); background-size:cover; background-position:center top;"></div>
+      </div>
+      <div>
+        <p class="eyebrow">{{ p.heroEyebrow }}</p>
+        <h1>{{ p.heroTitleA }} <em>{{ p.heroTitleB }}</em></h1>
+        <p class="lead">{{ p.heroText }}</p>
+        {% for para in p.welcomeBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+        <div class="btn-row">
+          <a href="/book/" class="btn btn-primary">{{ p.heroPrimaryLabel }}</a>
+          <a href="/about/" class="btn btn-outline">Read Our Story</a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="hh-visual"{% if p.heroImage %} style="background-image:url('{{ p.heroImage }}'); background-size:cover; background-position:center;"{% endif %}>
-    <div class="orb orb-a"></div><div class="orb orb-b"></div>
-    {% if not p.heroImage %}
-    <div class="hh-inner">
-      <span class="hh-word">{{ p.heroQuote }}</span>
-      <div class="hh-rule"></div>
-      <span class="hh-tag">{{ p.heroTag }}</span>
-    </div>
-    {% endif %}
   </div>
 </section>
 
-<div class="marquee"><div class="marquee-track">
-  {% set words = p.marquee | splitBy(",") %}
-  {% for i in range(0, 2) %}{% for w in words %}<span>{{ w | trim }}</span><span class="dot">&middot;</span>{% endfor %}{% endfor %}
-</div></div>
-
 <section class="bg-cream">
-  <div class="container grid-2">
-    <div>
-      <p class="eyebrow">{{ p.welcomeEyebrow }}</p>
-      <h2>{{ p.welcomeHeadingA }}<br /><em>{{ p.welcomeHeadingB }}</em></h2>
-      {% for para in p.welcomeBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
-      <div class="btn-row"><a href="/about/" class="btn btn-outline">Read Our Story</a></div>
-    </div>
-    <div class="visual-block">
-      {% if p.welcomeImage %}
-      <div class="visual-shape" style="background-image:url('{{ p.welcomeImage }}'); background-size:cover; background-position:center;"></div>
-      {% else %}
-      <div class="visual-shape"><span class="vs-text">{{ p.welcomeImageQuote }}</span></div>
-      {% endif %}
-      {% if p.welcomeBadgeNum %}
-      <div class="visual-badge">
-        <span class="vb-num">{{ p.welcomeBadgeNum }}</span>
-        <span class="vb-lbl">{{ p.welcomeBadgeLabel }}</span>
-      </div>
-      {% endif %}
+  <div class="container">
+    <h2>{{ p.treatmentsHeadingA }} <em>{{ p.treatmentsHeadingB }}</em></h2>
+    <p class="lead">{{ p.treatmentsIntro }}</p>
+    <div class="plain-list mt-3">
+      {% for t in collections.treatments %}
+      <a href="{{ t.url }}" class="plain-item">
+        <h3>{{ t.data.title }}</h3>
+        <p>{{ t.data.summary }}</p>
+        <span class="plain-link">View treatment &rarr;</span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <section class="bg-white">
   <div class="container">
-    <p class="eyebrow">{{ p.treatmentsEyebrow }}</p>
-    <h2>{{ p.treatmentsHeadingA }}<br /><em>{{ p.treatmentsHeadingB }}</em></h2>
-    <p class="lead">{{ p.treatmentsIntro }}</p>
-    <div class="grid-3 mt-3">
-      {% for t in collections.treatments %}
-      <a href="{{ t.url }}" class="card card-link">
-        {% if t.data.image %}<div class="card-img" style="background-image:url('{{ t.data.image }}');"></div>{% endif %}
-        <div class="accent"></div>
-        <h3>{{ t.data.title }}</h3>
-        <p>{{ t.data.summary }}</p>
-        <span class="card-arrow">View treatment &rarr;</span>
-      </a>
-      {% endfor %}
-      <a href="/treatments/" class="card card-link" style="background:var(--sand);">
-        <div class="accent"></div>
-        <h3>Not sure where to start?</h3>
-        <p>See all treatments side by side, with what each one helps with and what it includes.</p>
-        <span class="card-arrow">All treatments &rarr;</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="bg-bark">
-  <div class="container">
-    <p class="eyebrow">{{ p.supportEyebrow }}</p>
-    <h2>{{ p.supportHeadingA }}<br /><em>{{ p.supportHeadingB }}</em></h2>
+    <h2>{{ p.supportHeadingA }} <em>{{ p.supportHeadingB }}</em></h2>
     <p class="lead">{{ p.supportIntro }}</p>
-    <div class="chip-cloud mt-3">
-      {% for item in pages.treatments.items %}<span class="cloud-chip">{{ item.title }}</span>{% endfor %}
+    <div class="chip-row mt-3">
+      {% for item in pages.treatments.items | limit(5) %}
+      <span class="chip chip-accent">{{ item.title }}</span>
+      {% endfor %}
     </div>
-    <div class="btn-row"><a href="/treatments/#wellbeing" class="btn btn-light">See How ETM Helps</a></div>
+    <div class="btn-row"><a href="/treatments/#wellbeing" class="btn btn-outline">See the Full List</a></div>
   </div>
 </section>
 
 {% if collections.news.length %}
-<section class="bg-sand">
+<section class="bg-cream">
   <div class="container">
-    <p class="eyebrow">Latest</p>
-    <h2>News &amp;<br /><em>updates</em></h2>
-    <div class="grid-3 mt-3">
+    <h2>News <em>&amp; updates</em></h2>
+    <div class="plain-list mt-3">
       {% for post in collections.news | limit(3) %}
-      <a href="{{ post.url }}" class="card card-link" style="background:var(--white);">
-        {% if post.data.image %}<div class="card-img" style="background-image:url('{{ post.data.image }}');"></div>{% endif %}
-        <p class="post-date">{{ post.data.date | niceDate }}</p>
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.summary }}</p>
-        <span class="card-arrow">Read more &rarr;</span>
+      <a href="{{ post.url }}" class="plain-item plain-item-media">
+        <div class="plain-item-text">
+          <p class="post-date">{{ post.data.date | niceDate }}</p>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.summary }}</p>
+          <span class="plain-link">See more &rarr;</span>
+        </div>
+        {% if post.data.image %}
+        <div class="plain-item-thumb" style="background-image:url('{{ post.data.image }}');"></div>
+        {% endif %}
       </a>
       {% endfor %}
     </div>

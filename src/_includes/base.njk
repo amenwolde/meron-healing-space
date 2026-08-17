@@ -7,7 +7,7 @@
 <meta name="description" content="{{ metaDescription or site.footerBlurb }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -32,10 +32,11 @@
 <section class="cta-band">
   <div class="container">
     <p class="eyebrow" style="color:rgba(255,255,255,0.8);">{{ cta.eyebrow }}</p>
-    <h2>{{ cta.headingA }}<br /><em style="color:#F7F0E6;">{{ cta.headingB }}</em></h2>
+    <h2>{{ cta.headingA }}<br /><em style="color:var(--cream);">{{ cta.headingB }}</em></h2>
     <p>{{ cta.body }}</p>
     <div class="btn-row">
       <a href="{{ cta.primaryUrl }}" class="btn btn-primary">{{ cta.primaryLabel }}</a>
+      <a href="{{ cta.secondaryUrl }}" class="btn btn-outline">{{ cta.secondaryLabel }}</a>
     </div>
     <p class="cta-closing">{{ cta.closing }}</p>
   </div>

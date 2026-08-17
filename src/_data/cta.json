@@ -6,6 +6,6 @@
   "primaryLabel": "Book a Treatment",
   "primaryUrl": "/book/",
   "secondaryLabel": "Get in Touch",
-  "secondaryUrl": "/contact/",
+  "secondaryUrl": "/book/#booking-form",
   "closing": "One careful step at a time."
 }

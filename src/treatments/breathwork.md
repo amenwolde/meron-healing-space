@@ -2,6 +2,7 @@
 title: Breathwork Sessions
 order: 4
 eyebrow: Guided Breathing Practice
+when: When your mind races and your body can't switch off
 summary: Simple guided breathing practices that encourage relaxation, improve body awareness, and support emotional wellbeing.
 price: Pricing on enquiry
 bestFor: Stress and body awareness

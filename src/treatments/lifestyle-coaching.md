@@ -2,6 +2,7 @@
 title: Lifestyle & Wellbeing Coaching
 order: 5
 eyebrow: Building Habits That Last
+when: When you want habits that actually last
 summary: Personalised guidance to help you build healthy daily habits that support lasting wellbeing through rest, movement, nourishment, and mindful living.
 price: Pricing on enquiry
 bestFor: Building lasting habits

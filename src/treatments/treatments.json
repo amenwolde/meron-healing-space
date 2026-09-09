@@ -1,5 +1,0 @@
-{
-  "layout": "treatment.njk",
-  "tags": "treatments",
-  "permalink": "/treatments/{{ page.fileSlug }}/"
-}

@@ -1,0 +1,26 @@
+---
+layout: base.njk
+nav: news
+---
+<section class="page-hero">
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="container">
+    <p class="eyebrow">{{ date | niceDate }}</p>
+    <h1 style="color:var(--cream);">{{ title }}</h1>
+    {% if summary %}<p>{{ summary }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container-narrow">
+    {% if image %}<div class="post-img" style="background-image:url('{{ image }}');"></div>{% endif %}
+    <div class="detail-body">
+      {% for para in body | paragraphs %}<p class="lead lead-wide">{{ para }}</p>{% endfor %}
+    </div>
+    <div class="btn-row">
+      {% if videoUrl %}<a href="{{ videoUrl }}" class="btn btn-primary" target="_blank" rel="noopener">Watch on YouTube</a>{% endif %}
+      <a href="/news/" class="btn btn-outline">All Updates</a>
+      <a href="/book/" class="btn {% if videoUrl %}btn-outline{% else %}btn-primary{% endif %}">Book a Treatment</a>
+    </div>
+  </div>
+</section>

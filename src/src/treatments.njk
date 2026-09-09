@@ -1,0 +1,39 @@
+---
+layout: base.njk
+nav: treatments
+permalink: /treatments/
+hideCta: true
+eleventyComputed:
+  metaTitle: "{{ pages.treatments.metaTitle }}"
+  metaDescription: "{{ pages.treatments.metaDescription }}"
+---
+{% set p = pages.treatments %}
+{% set crumb = "Treatments" %}
+{% include "pagehero.njk" %}
+
+<section class="bg-white">
+  <div class="container">
+    <div class="shop-grid">
+      {% for t in collections.treatments %}
+      <a href="{{ t.url }}" class="shop-card">
+        {% if t.data.image %}
+        <div class="shop-card-img" style="background-image:url('{{ t.data.image }}');"></div>
+        {% else %}
+        <div class="shop-card-img shop-card-img-placeholder"><span>{{ t.data.title }}</span></div>
+        {% endif %}
+        <div class="shop-card-body">
+          <h3>{{ t.data.title }}</h3>
+          <p class="shop-card-price">{{ t.data.price }}</p>
+          <span class="shop-card-link">View treatment &rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="shop-help">
+      <p class="lead">{{ p.helpText }}</p>
+      <a href="/book/" class="btn btn-outline">{{ p.helpTitle }}</a>
+    </div>
+  </div>
+</section>
+
+{% include "wellbeing-section.njk" %}

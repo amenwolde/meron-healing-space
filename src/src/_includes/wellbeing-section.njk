@@ -1,0 +1,11 @@
+<section class="bg-bark" id="wellbeing">
+  <div class="container">
+    <p class="eyebrow">{{ p.supportEyebrow }}</p>
+    <h2>{{ p.supportHeadingA }}<br /><em>{{ p.supportHeadingB }}</em></h2>
+    <p class="lead">{{ p.supportIntro }}</p>
+    <div class="chip-cloud mt-3">
+      {% for item in p.items %}<span class="cloud-chip">{{ item.title }}</span>{% endfor %}
+    </div>
+    {% if p.note %}<p class="lead" style="margin-top:2rem; font-size:0.88rem; opacity:0.75;">{{ p.note }}</p>{% endif %}
+  </div>
+</section>

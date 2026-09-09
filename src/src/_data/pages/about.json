@@ -1,0 +1,91 @@
+{
+  "metaTitle": "About Us & The Story Behind ETM",
+  "metaDescription": "The story behind ETM - inspired by a childhood in Ethiopia rooted in faith, nature and simple daily living, and shaped by more than fifteen years in wellness.",
+  "heroEyebrow": "About Us",
+  "heroTitleA": "Welcome to",
+  "heroTitleB": "Meron Healing Space",
+  "heroText": "A place to slow down, breathe deeply, and reconnect with your body.",
+  "storyEyebrow": "Our Story",
+  "storyHeadingA": "The story",
+  "storyHeadingB": "behind ETM",
+  "storyBody": "ETM (Ethiopian Traditional Method) was inspired by a childhood in Ethiopia rooted in faith, nature, and simple daily living \u2014 time outdoors, natural foods, movement, prayer, and community.\n\nAfter more than fifteen years working in wellness, I created ETM to bring that same simplicity to people living busy, modern lives.",
+  "storyPull": "ETM is not about quick fixes or perfection. It is about returning to the simple rhythms that help us care for ourselves \u2014 one careful step at a time.",
+  "storyImage": "/assets/uploads/meron-story.png",
+  "storyImageQuote": "Faith, nature, and simple daily living",
+  "whatEyebrow": "What is ETM?",
+  "whatHeadingA": "A holistic approach to",
+  "whatHeadingB": "restoring balance",
+  "whatBody": "A holistic approach that supports the body's natural ability to restore balance, combining touch, movement, breath, and rest.",
+  "whatPull": "Every session is personalised because every person is unique.",
+  "elements": [
+    {
+      "label": "01",
+      "title": "Therapeutic Touch",
+      "text": "Hands-on work grounded in years of practice. Unhurried, attentive, and always at a depth you are comfortable with."
+    },
+    {
+      "label": "02",
+      "title": "Breath",
+      "text": "Simple guided breathing to calm the nervous system, ease tension, and bring you back into the present moment."
+    },
+    {
+      "label": "03",
+      "title": "Movement",
+      "text": "Gentle, accessible movement to release stiffness, support mobility, and help you feel at home in your body again."
+    },
+    {
+      "label": "04",
+      "title": "Rest",
+      "text": "Real rest, treated as a practice rather than an afterthought. Learning how to let the body settle and restore."
+    },
+    {
+      "label": "05",
+      "title": "Healthy Daily Habits",
+      "text": "Small, sustainable rhythms around food, sleep, and routine that carry the work forward between sessions."
+    },
+    {
+      "label": "\u221e",
+      "title": "Faith & Nature",
+      "text": "The foundation beneath it all. ETM was shaped by faith, by the natural world, and by paying close attention to what the body already knows."
+    }
+  ],
+  "expEyebrow": "The ETM Experience",
+  "expHeadingA": "What a session",
+  "expHeadingB": "feels like",
+  "expBody": "Every session is tailored to you, unhurried, and comes with simple guidance to take home.",
+  "steps": [
+    {
+      "num": "01",
+      "title": "Understanding You",
+      "text": "We begin with a conversation. Your lifestyle, what brings you here, what you would like to feel differently, and how your body feels on the day."
+    },
+    {
+      "num": "02",
+      "title": "Tailored Treatment",
+      "text": "Your treatment is built from that conversation using ETM principles \u2014 therapeutic touch, breath, movement, and relaxation, weighted to what you need."
+    },
+    {
+      "num": "03",
+      "title": "Slowing Down",
+      "text": "Throughout, you are encouraged to slow down and breathe naturally. Nothing is rushed, and you set the depth and the pace at every stage."
+    },
+    {
+      "num": "04",
+      "title": "Beyond the Session",
+      "text": "You leave with simple, practical guidance \u2014 small habits and practices you can genuinely fit into everyday life."
+    }
+  ],
+  "practicalEyebrow": "Before You Come",
+  "practicalHeadingA": "What to know",
+  "practicalHeadingB": "beforehand",
+  "practicalItems": [
+    "Arrive a few minutes early so your session can begin unhurried",
+    "Wear comfortable clothing you can move in",
+    "Avoid a heavy meal in the two hours before your treatment",
+    "Come hydrated, and drink water afterwards",
+    "Let us know about any injuries, medication, or if you are pregnant",
+    "Keep the rest of your day gentle where you can"
+  ],
+  "practicalImage": "",
+  "practicalImageQuote": "Slow down. Breathe naturally. Let the body relax."
+}

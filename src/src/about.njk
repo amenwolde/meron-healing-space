@@ -1,0 +1,53 @@
+---
+layout: base.njk
+nav: about
+permalink: /about/
+eleventyComputed:
+  metaTitle: "{{ pages.about.metaTitle }}"
+  metaDescription: "{{ pages.about.metaDescription }}"
+---
+{% set p = pages.about %}
+{% set crumb = "About" %}
+{% include "pagehero.njk" %}
+
+<section class="bg-white" id="story">
+  <div class="container story-grid">
+    <div class="story-heading">
+      <p class="eyebrow">{{ p.storyEyebrow }}</p>
+      <h2>{{ p.storyHeadingA }}<br /><em>{{ p.storyHeadingB }}</em></h2>
+    </div>
+    <div class="visual-block story-photo">
+      {% if p.storyImage %}
+      <div class="visual-shape visual-shape-framed" style="background-image:url('{{ p.storyImage }}'); background-size:cover; background-position:center;"></div>
+      {% else %}
+      <div class="photo-placeholder"><span class="photo-placeholder-text">Photo of Meron &mdash; coming soon</span></div>
+      {% endif %}
+      <div class="visual-badge visual-badge-cover">
+        <span class="vb-num">ETM</span>
+        <span class="vb-lbl">Ethiopian Traditional Method</span>
+      </div>
+    </div>
+    <div class="story-text">
+      {% for para in p.storyBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream" id="what">
+  <div class="container">
+    <p class="eyebrow">{{ p.whatEyebrow }}</p>
+    <h2>{{ p.whatHeadingA }}<br /><em>{{ p.whatHeadingB }}</em></h2>
+    {% for para in p.whatBody | paragraphs %}<p class="lead">{{ para }}</p>{% endfor %}
+    <div class="grid-3 mt-3">
+      {% for e in p.elements %}
+      <div class="card" style="background:var(--white);{% if loop.last %}background:var(--sand);{% endif %}">
+        <span class="accent-num">{{ e.label }}</span>
+        <h3>{{ e.title }}</h3>
+        <p>{{ e.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+

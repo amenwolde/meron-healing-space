@@ -1,0 +1,69 @@
+---
+layout: base.njk
+nav: treatments
+---
+<section class="page-hero">
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="container">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1 style="color:var(--cream);">{{ title }}</h1>
+    <p>{{ summary }}</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container detail-grid">
+    <div class="detail-body">
+      {% if image %}
+      <div class="detail-img" style="background-image:url('{{ image }}');"></div>
+      {% else %}
+      <div class="detail-img shop-card-img-placeholder" style="height:400px; margin-bottom:2.5rem;"><span>{{ title }}</span></div>
+      {% endif %}
+      <div>
+        {% for para in body | paragraphs %}<p>{{ para }}</p>{% endfor %}
+      </div>
+
+      {% if includes %}
+      <p class="detail-sub">What is included</p>
+      <ul class="incl-list">
+        {% for i in includes %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+    </div>
+
+    <aside>
+      <div class="side-panel">
+        <h3>At a Glance</h3>
+        {% for g in glance %}
+        <div class="sp-row"><span class="sp-key">{{ g.key }}</span><span class="sp-val">{{ g.value }}</span></div>
+        {% endfor %}
+        <a href="/book/" class="btn btn-primary btn-full" style="margin-top:1.6rem;">Book This Treatment</a>
+        <a href="/book/#booking-form" class="btn btn-outline btn-full" style="margin-top:0.7rem;">Ask a Question</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="bg-cream">
+  <div class="container">
+    <h2>Other <em>treatments</em></h2>
+    <div class="shop-grid mt-3">
+      {% for t in collections.treatments %}
+        {% if t.data.title != title %}
+        <a href="{{ t.url }}" class="shop-card">
+          {% if t.data.image %}
+          <div class="shop-card-img" style="background-image:url('{{ t.data.image }}');"></div>
+          {% else %}
+          <div class="shop-card-img shop-card-img-placeholder"><span>{{ t.data.title }}</span></div>
+          {% endif %}
+          <div class="shop-card-body">
+            <h3>{{ t.data.title }}</h3>
+            <p class="shop-card-price">{{ t.data.price }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
